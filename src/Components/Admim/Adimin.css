@@ -1,0 +1,23 @@
+.sidevar{
+
+    background-color: aqua;
+    min-height: 100vh;
+    /* text-align: center; */
+    background-color: aqua;
+    min-height: 100vh;
+    padding: 1px;
+    
+
+}
+.sidevar h3,h5{
+    margin-top: 43px;
+    padding: 20px;
+    font-size: 28px;
+    font-family: arial black;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+.sidevar h5:hover{
+    background-color: #0ebb0e;
+}

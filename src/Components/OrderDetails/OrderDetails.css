@@ -1,0 +1,10 @@
+.table{
+    width: 100%;
+    border: none;
+}
+.table tbody tr td{
+    border-color: white;
+}
+.tbody{
+    width: 100%;
+}

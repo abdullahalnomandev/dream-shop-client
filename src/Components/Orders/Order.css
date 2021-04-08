@@ -1,0 +1,31 @@
+table{
+    width: 100% !important;
+}
+.order-summery{
+    text-align: center;
+}
+.order-summery h1 {
+    color: #ff099d;
+    font-family: arial black;
+    background-color: #a8cbc1;
+    padding: 8px;
+}
+.order-summery h3{
+    color: tomato;
+}
+.order-summery h5 {
+    color: blue;
+    font-family: auial;
+}
+
+.order{
+    color: #ff099d;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #a8cbc1;
+    width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
