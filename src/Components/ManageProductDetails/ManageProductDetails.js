@@ -7,17 +7,17 @@ const ManageProductDetails = (props) => {
 
     const { product, price, wight, _id } = props.manageProduct;
 
-    const deleteEventHandler = (id) => {
+    const deleteEventHandler = (e,id) => {
         fetch(`https://rocky-reaches-51379.herokuapp.com/delete/${id}`, {
             method: 'delete'
         })
-            .then(res => res.json())
             .then(result => {
                 if (result) {
-                    alert("Product has been deleted")
+                    
+                    e.target.parentNode.style.display="none";
                 }
             })
-    }
+    }  
 
     return (
 
@@ -26,11 +26,12 @@ const ManageProductDetails = (props) => {
                 <td> {product}</td>
                 <td>{price}</td>
                 <td>{wight}</td>
-                <td className="deleteIcon" onClick={() => deleteEventHandler(_id)}><FontAwesomeIcon icon={faTrash} /> Delate</td>
+                <td className="deleteIcon" onClick={(e) => deleteEventHandler(e,_id)}><FontAwesomeIcon icon={faTrash} /> Delate</td>
             </tr>
 
-        </tbody>
+        </tbody>  
     );
 };
+
 
 export default ManageProductDetails;
