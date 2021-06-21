@@ -19,11 +19,17 @@ const Home = () => {
         <div>
             <div className="container">
                 <div className="row">
-                    {
-                        spinner &&  <Spinner className="text-center" animation="border" variant="success" />
-                    }
-                    {
+                {
                         products.map((product, id) => <ProductsDetails key={id} product={product} />)
+                    }
+
+                    {
+                        products.length === 0 &&
+
+
+                        <img style={{ marginLeft: '35%', marginTop: '15%' }} className="img-fluid" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="" />
+
+
                     }
                 </div>
             </div>
