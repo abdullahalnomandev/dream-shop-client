@@ -12,7 +12,7 @@ const ProductsDetails = (props) => {
             <Card className="classContainer">
                 <Card.Img variant="top" src={img} />
                 <Card.Body style={{ textAlign: 'center' }}>
-                    <Card.Title>{product} -{wight}</Card.Title>
+                    <Card.Title> <span className="text-secondary">{product} -{wight}</span> </Card.Title>
                     <div className="d-flex  ">
                         <h3 className="mr-5" >$ {price}</h3>
                         <Button as={Link} to={`/checkout/${_id}`} variant="success"> Buy Now</Button>

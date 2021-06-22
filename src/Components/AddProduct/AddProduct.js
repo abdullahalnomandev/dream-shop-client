@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AddProduct.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const AddProduct = () => {
@@ -11,7 +11,7 @@ const AddProduct = () => {
 
     toast.configure()
     const successNotification = () => {
-        toast.success('Your Product has been added on the home page!',{position : toast.POSITION.TOP_CENTER})
+        toast.success('Your Product has been added on the home page!', { position: toast.POSITION.TOP_CENTER })
     }
 
     const onSubmit = data => {

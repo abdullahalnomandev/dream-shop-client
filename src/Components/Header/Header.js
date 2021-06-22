@@ -14,7 +14,7 @@ const Header = () => {
         <div className="bg-light sticky-top">
             <div className="container">
                 <Navbar collapseOnSelect expand="lg " >
-                    <Navbar.Brand className="dream-riders " >Dream Shop</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" className="dream-riders " >Dream Shop</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto nav-list">
