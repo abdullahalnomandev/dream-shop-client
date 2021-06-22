@@ -1,8 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UseContext } from '../../App';
+import {  toast } from 'react-toastify';
+
 
 const Checkout = () => {
+    toast.configure()
+
+    const successNotification = () => {
+        toast.success('Thank you.Your Order has been successfull !',{position : toast.POSITION.TOP_CENTER})
+    }
 
     const { id } = useParams();
     const [products, setProducts] = useState([]);
@@ -40,7 +47,7 @@ const Checkout = () => {
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    alert("Your order successfully.")
+                    successNotification()
                 }
             })
     }

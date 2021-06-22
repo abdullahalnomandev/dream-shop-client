@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form, Nav, Navbar, Button, FormControl, NavDropdown } from 'react-bootstrap';
 import './header.css';
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { UseContext } from '../../App';
+import { useState } from 'react';
+
 
 const Header = () => {
 
-    const history = useHistory();
-    function handleClick() {
-        history.push("/register");
-    }
+    const [loginUser, setLoginUser] = useContext(UseContext);
 
     return (
         <div className="bg-light sticky-top">
@@ -22,8 +22,19 @@ const Header = () => {
                             <Nav.Link as={Link} to="/orders">Orders</Nav.Link>
                             <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
                             <Nav.Link as={Link} to="/deals">Deals</Nav.Link>
-                            <button onClick={handleClick} className="btn btn-danger ms-auto">LogIn</button>
                         </Nav>
+
+                        {
+                            loginUser.name === undefined &&
+                            <Link to="/register">
+                                <button className="btn btn-success ms-auto">Log In</button>
+                            </Link>
+                        }
+
+                        {
+                            loginUser.name !== undefined &&
+                            <button onClick={() => setLoginUser({})} className="btn btn-danger ms-auto">Log out</button>
+                        }
                         <Nav>
                         </Nav>
                     </Navbar.Collapse>

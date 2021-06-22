@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 import './AddProduct.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import {  toast } from 'react-toastify';
+
 
 const AddProduct = () => {
     const [imageURL, setImgURL] = useState(null);
     const { register, handleSubmit, watch, errors } = useForm();
+
+    toast.configure()
+    const successNotification = () => {
+        toast.success('Your Product has been added on the home page!',{position : toast.POSITION.TOP_CENTER})
+    }
 
     const onSubmit = data => {
         const eventItems = {
@@ -24,7 +31,7 @@ const AddProduct = () => {
 
             .then(res => {
                 if (res) {
-                    alert("Product added successfully");
+                    successNotification();
                 }
             })
     };

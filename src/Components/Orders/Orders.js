@@ -12,13 +12,13 @@ const Orders = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
 
-    }, [])
-    console.log(orders);
+    }, []);
+  
     return (
         <>
             <div className="order-summery">
 
-                <h1>Order Summeay</h1>
+                <h1>Order summary</h1>
                 <h5>E-mail: {orders[0]?.email}</h5>
                 <h3>Hello, {orders[0]?.name}</h3>
             </div>
